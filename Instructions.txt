@@ -1,0 +1,6 @@
+make
+sudo make install 
+sudo make modules_install
+#boot
+sudo update grep
+
