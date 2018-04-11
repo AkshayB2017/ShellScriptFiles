@@ -1,0 +1,30 @@
+#How to run kernel code?
+#This is for before getting started
+sudo apt-get update
+
+sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc
+
+#Go to kernel.org and download the latest stable version
+#Change to directory where downloaded file exists
+tar xf linux-4.15.13.tar.xz
+#Change to extracted linux 
+cd linux-4.15.13
+
+#Either save and exit or execute
+
+cp/boot/config-$(uname -r) .config
+make menuconfig
+
+#Use make command to compile kernel
+
+sudo make -j 4 && sudo make modules_install -j 4 && sudo make install -j 4
+
+#j option to specify no of cores to be used
+#sudo is optional
+
+#to use updated version
+update-initramfs -c -k 4.7.1   
+update-grub
+
+#restart system
+
