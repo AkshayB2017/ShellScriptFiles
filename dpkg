@@ -1,0 +1,20 @@
+#To install
+dpkg -i packagename
+#Listing Packages
+dpkg -l
+
+#To remove
+dpkg -r name
+#to view
+dpkg -c name
+#check a package
+dpkg -s name
+#check location
+dpkg -L name
+#install all packages from directory
+dpkg -R --install debpackages/
+#Display dpkg license
+dpkg --licence
+#display dpkg version
+dpkg --version
+
