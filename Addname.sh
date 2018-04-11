@@ -9,16 +9,16 @@ fi
 
 if [ -e "$1" ]
 	then
-		echo "yes it exsists"
+		echo "yes it exists"
 else
-	echo "error no exsistance of file"
+	echo "error no existence of file"
 fi
 
 if grep -Fxq "$2" "$1" 
 	then 
 		echo "username exists"
 else
-	echo "username does not exit"
+	echo "username does not exist"
 	echo "appending to file"
 	echo "$2">>"$1"
 
